@@ -1,0 +1,5 @@
+.stack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: $color-line; }
+.stack-grid article { background: $color-bg; padding: 2rem; @include interactive-transition; }
+.stack-grid article:hover { background: $color-surface; transform: translateY(-3px); }
+.stack-grid article > div { display: flex; flex-wrap: wrap; gap: .5rem; }
+@include mobile { .stack-grid { grid-template-columns: 1fr; } }

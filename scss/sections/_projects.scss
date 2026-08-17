@@ -1,0 +1,13 @@
+.project-list { border-top: 1px solid $color-line; }
+.project-filters { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+.filter-button { background: none; border: 0; color: $color-muted; font: 500 .7rem $font-mono; padding: .4rem 0; }
+.filter-button.is-active, .filter-button:hover { color: $color-accent; }
+.project-row { display: grid; grid-template-columns: .7fr 1.2fr 1.6fr 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid $color-line; align-items: start; @include interactive-transition; }
+.project-row:hover { transform: translateX(8px); }
+.project-row h3 { margin: 0 0 .4rem; font-size: 1.5rem; }
+.project-row p { margin-bottom: 1rem; }
+.project-number, .project-category, .project-status { color: $color-accent; font: 500 .7rem $font-mono; }
+.inline-link { color: $color-accent; font: 500 .78em $font-mono; margin-left: .35rem; }
+
+@include tablet { .project-row { grid-template-columns: .7fr 1.3fr 2fr; } .project-status { grid-column: 2 / -1; } }
+@include mobile { .project-row { display: block; } .project-row > div, .project-status { margin-bottom: 1rem; } }

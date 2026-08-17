@@ -1,0 +1,15 @@
+@mixin focus-ring {
+  &:focus-visible { outline: 2px solid $color-accent; outline-offset: 4px; }
+}
+
+@mixin section-label {
+  color: $color-accent;
+  font-family: $font-mono;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@mixin interactive-transition {
+  transition: color .2s ease, background .3s ease, border-color .3s ease, transform .3s ease;
+}

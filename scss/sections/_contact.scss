@@ -1,0 +1,8 @@
+.contact { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+.contact h2 { margin: 1rem 0 2rem; font-size: clamp(3.5rem, 8vw, 7rem); }
+.contact-intro { max-width: 440px; font-size: 1.1rem; }
+.contact-details { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid $color-line; }
+.contact-details div { display: flex; flex-direction: column; gap: .35rem; }
+.contact-details span { color: $color-muted; font: 500 .7rem $font-mono; }
+.contact-details strong, .contact-details a { font-size: .9rem; }
+@include mobile { .contact-details { display: block; } .contact-details div { margin-top: 1.5rem; } }

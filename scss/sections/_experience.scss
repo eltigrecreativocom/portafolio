@@ -1,0 +1,13 @@
+.experience-list { border-top: 1px solid $color-line; }
+.experience-item { display: grid; grid-template-columns: 1fr 2fr; gap: 2.5rem; padding: 2rem 0; border-bottom: 0; }
+.experience-meta { display: flex; flex-direction: column; gap: .5rem; color: $color-muted; font: 500 .72rem $font-mono; }
+.experience-meta span { color: $color-accent; }
+.experience-item > div:nth-child(2) { padding: 1.25rem 1.5rem; border: 1px solid transparent; @include interactive-transition; }
+.experience-item:hover > div:nth-child(2) { background: rgba($color-surface, .72); border-color: rgba($color-muted, .14); transform: translateY(-3px); }
+.experience-item h3 { margin: 0 0 1rem; font-size: 1.4rem; }
+.experience-item p { max-width: 640px; }
+.experience-item ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: .4rem 1.5rem; margin-bottom: 0; padding-left: 1.2rem; color: $color-muted; font-size: .9rem; }
+.experience-item .project-tags span { border-radius: 999px; background: rgba($color-accent, .08); border-color: transparent; }
+
+@include tablet { .experience-item { grid-template-columns: 1fr 2fr; } }
+@include mobile { .experience-item { display: block; } .experience-meta { margin-bottom: 1.5rem; } .experience-item ul { grid-template-columns: 1fr; } }

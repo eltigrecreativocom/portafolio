@@ -1,0 +1,7 @@
+.site-nav { display: grid; gap: .7rem; }
+.nav-link { display: flex; gap: 1rem; align-items: center; color: $color-muted; font: 500 .72rem $font-mono; letter-spacing: .06em; @include interactive-transition; }
+.nav-link span { position: relative; color: #516078; @include interactive-transition; }
+.nav-link span::before { content: ''; position: absolute; right: calc(100% + .8rem); top: 50%; width: 0; height: 1px; background: $color-accent; transition: width .25s ease; }
+.nav-link:hover, .nav-link.is-active { color: $color-text; transform: translateX(6px); }
+.nav-link:hover span, .nav-link.is-active span { color: $color-accent; }
+.nav-link:hover span::before, .nav-link.is-active span::before { width: 2rem; }

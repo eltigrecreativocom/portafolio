@@ -1,0 +1,10 @@
+.site-footer { margin-left: $sidebar-width; display: flex; justify-content: space-between; border-top: 1px solid $color-line; padding: 1.5rem 3rem; color: $color-muted; font: 500 .68rem $font-mono; }
+
+@include tablet {
+  .site-footer { margin-left: 0; }
+}
+
+@include mobile {
+  .site-footer { display: block; }
+  .site-footer span { display: block; margin: .5rem 0; }
+}

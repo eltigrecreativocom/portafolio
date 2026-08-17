@@ -1,0 +1,26 @@
+.about { display: grid; grid-template-columns: 1fr 2fr; column-gap: 2rem; padding-top: clamp(4.5rem, 7vw, 6rem); }
+.about .section-heading { display: contents; }
+.about .section-heading .section-label { grid-column: 1; grid-row: 1; margin-top: .5rem; }
+.about .section-heading h2 { grid-column: 2; grid-row: 1; margin: 0 0 2.5rem; }
+.about-grid { display: contents; }
+.about .about-grid > div:first-child { grid-column: 1; grid-row: 2; }
+.about-copy { grid-column: 2; grid-row: 2; max-width: 680px; }
+.about-copy p { font-size: 1.1rem; }
+.about-copy strong { color: $color-text; font-weight: 700; }
+.about-position { color: $color-accent; font: 500 .72rem/1.7 $font-mono; letter-spacing: .08em; }
+.about-position span { color: $color-muted; font-size: .68rem; }
+.about-actions { display: flex; grid-column: 2; grid-row: 3; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.about-social-links { display: flex; grid-column: 2; grid-row: 4; align-items: center; gap: 2rem; margin-top: 2.5rem; }
+.about-social-links::before { content: 'ENLACES'; color: $color-muted; font: 500 .7rem $font-mono; letter-spacing: .1em; }
+.about-social-links .social-links { margin: 0; }
+
+@include mobile {
+  .about { display: block; }
+  .about .section-heading, .about .about-grid { display: block; }
+  .about .section-heading .section-label { margin-bottom: 1rem; }
+  .about .section-heading h2 { margin-bottom: 2rem; }
+  .about .about-grid { width: 100%; }
+  .about .about-copy { width: 100%; max-width: none; margin-top: 2rem; }
+  .about .about-actions, .about .about-social-links { display: flex; width: 100%; }
+  .about .about-social-links { flex-wrap: wrap; gap: 1rem; }
+}

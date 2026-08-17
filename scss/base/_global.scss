@@ -1,0 +1,29 @@
+html { scroll-behavior: smooth; }
+body { background: $color-bg; overflow-x: hidden; }
+.main-content { margin-left: $sidebar-width; }
+.section { width: min(100% - 8rem, $content-width); margin-inline: auto; padding: clamp(6rem, 12vw, 10rem) 0; }
+.section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start; margin-bottom: 4rem; }
+.section-label { @include section-label; }
+::selection { background: $color-accent; color: $color-bg; }
+
+body::before {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(480px circle at var(--pointer-x, 50vw) var(--pointer-y, 30vh), rgba(100, 255, 218, .075), transparent 68%);
+}
+
+.main-content, .site-footer { position: relative; z-index: 1; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@include tablet {
+  .main-content { margin-left: 0; }
+  .section { width: min(100% - 3rem, $content-width); }
+}
+
+@include mobile {
+  .section { padding-block: 5rem; }
+}
