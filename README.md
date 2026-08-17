@@ -7,7 +7,7 @@ Portfolio profesional interactivo para Luis Fernando Gutierrez Castillo, present
 - Nombre: Luis Fernando Gutierrez Castillo
 - Rol: Desarrollador web
 - Especialidad: Frontend · CSS/Sass · WordPress
-- Correo: `fernandodacuso@gmail.com`
+- Correo: `eltigrecreativo.com@gmail.com`
 - Teléfono: `+51 939 512 879`
 
 ## Características
@@ -75,7 +75,7 @@ Editar `data/projects.json` para cambiar títulos, categorías, URLs, tecnologí
 
 Proyectos actuales:
 
-- Invitarte — `https://www.invitarte.lat/`
+- Invitarte — `https://invitarte.lat/`
 - Editorial Cronos — `https://editorial-cronos.com/`
 - Elyon Natural — `http://elyonnatural.com/`
 - ZYMA — `http://zymal.lat/`
@@ -162,5 +162,5 @@ Antes de publicar, comprobar:
 - Los enlaces internos desplazan sin cambiar la URL.
 - Los cuatro proyectos muestran sus enlaces directos.
 - Las tres experiencias aparecen correctamente.
-- El correo abre `fernandodacuso@gmail.com`.
+- El correo abre `eltigrecreativo.com@gmail.com`.
 - La vista móvil no genera scroll horizontal.
