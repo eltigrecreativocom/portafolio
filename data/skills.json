@@ -2,5 +2,6 @@
   "frontend": ["HTML", "CSS", "Sass / SCSS", "JavaScript", "Responsive Design", "Component Architecture"],
   "wordpress": ["WordPress", "WooCommerce", "Plugins personalizados", "PHP", "Temas", "Plantillas"],
   "applications": ["React", "Nuxt", "Node.js", "APIs", "PostgreSQL"],
-  "infrastructure": ["Linux", "VPS", "Git", "Docker", "Nginx", "SSL"]
+  "infrastructure": ["Linux", "VPS", "Git", "Docker", "Nginx", "SSL"],
+  "complementarias": ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign"]
 }

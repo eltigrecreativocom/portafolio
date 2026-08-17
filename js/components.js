@@ -2,14 +2,16 @@ const fallbackSkills = {
   frontend: ['HTML', 'CSS', 'Sass / SCSS', 'JavaScript', 'Diseño responsive', 'Arquitectura de componentes'],
   wordpress: ['WordPress', 'WooCommerce', 'Plugins personalizados', 'PHP', 'Temas', 'Plantillas'],
   applications: ['React', 'Nuxt', 'Node.js', 'APIs', 'PostgreSQL'],
-  infrastructure: ['Linux', 'VPS', 'Git', 'Docker', 'Nginx', 'SSL']
+  infrastructure: ['Linux', 'VPS', 'Git', 'Docker', 'Nginx', 'SSL'],
+  complementarias: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign']
 };
 
 const skillLabels = {
   frontend: 'Frontend',
   wordpress: 'WordPress',
   applications: 'Aplicaciones web',
-  infrastructure: 'Infraestructura'
+  infrastructure: 'Infraestructura',
+  complementarias: 'Complementarias'
 };
 
 async function renderSkills() {
