@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-invitarte" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5a623;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d68910;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#grad-invitarte)"/>
+  
+  <!-- Decorative circle -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#f5a623" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Main title -->
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="#333">
+    Invitarte
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="240" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#666">
+    Invitaciones Digitales Estilo TikTok
+  </text>
+  
+  <!-- Feature boxes -->
+  <g id="features">
+    <rect x="150" y="320" width="240" height="120" fill="#fff" stroke="#f5a623" stroke-width="2" rx="8"/>
+    <text x="270" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">RSVP</text>
+    <text x="270" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">Confirmación de Asistencia</text>
+    
+    <rect x="480" y="320" width="240" height="120" fill="#fff" stroke="#f5a623" stroke-width="2" rx="8"/>
+    <text x="600" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">GPS</text>
+    <text x="600" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">Ubicación y Mapas</text>
+    
+    <rect x="810" y="320" width="240" height="120" fill="#fff" stroke="#f5a623" stroke-width="2" rx="8"/>
+    <text x="930" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">ÁLBUM</text>
+    <text x="930" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">Fotos Digitales</text>
+  </g>
+  
+  <!-- Bottom accent -->
+  <rect y="600" width="1200" height="75" fill="url(#accent-orange)" opacity="0.15"/>
+  <text x="600" y="645" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#f5a623">
+    Plataforma en Producción • Nuxt + JavaScript
+  </text>
+</svg>

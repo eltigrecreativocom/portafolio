@@ -30,9 +30,8 @@ function mountProjects(projects, list, filters) {
     .join('');
 
   const drawProjects = filter => {
-    const selectedProjects = filter === 'ALL'
-      ? projects
-      : projects.filter(project => project.category === filter);
+    const selectedProjects = (filter === 'ALL' ? projects : projects.filter(project => project.category === filter))
+      .sort((a, b) => Number(b.featured || false) - Number(a.featured || false));
 
     list.innerHTML = selectedProjects.map(project => `
       <article class="project-row ${project.featured ? 'is-featured' : ''}">
@@ -45,6 +44,14 @@ function mountProjects(projects, list, filters) {
           <p class="project-category">${project.category}</p>
         </div>
         <div>
+          <figure class="project-visual" role="img" aria-label="Captura de pantalla de ${project.title}">
+            <img src="./assets/images/${project.id}-${project.title.toLowerCase().replace(/\s+/g, '-')}.svg" 
+                 alt="${project.title} - ${project.category}" 
+                 onerror="this.style.display='none'; this.parentElement.classList.add('no-image')"
+                 loading="lazy">
+            <span class="project-visual-label" aria-hidden="true">${project.title}</span>
+            <span class="project-visual-meta" aria-hidden="true">${project.tags.slice(0, 3).join(' · ')}</span>
+          </figure>
           <p>${project.description}</p>
           <div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
         </div>

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-zyma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8ecf1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c3483;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#grad-zyma)"/>
+  
+  <!-- Status banner -->
+  <rect width="1200" height="80" fill="url(#accent-purple)"/>
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">
+    EN DESARROLLO
+  </text>
+  
+  <!-- Main title -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="52" font-weight="bold" text-anchor="middle" fill="#6c3483">
+    ZYMA
+  </text>
+  
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#555">
+    Gestión Comercial y Seguimiento en Campo
+  </text>
+  
+  <!-- Feature columns -->
+  <g id="features-zyma">
+    <!-- Feature 1: CRM -->
+    <rect x="100" y="340" width="240" height="160" fill="#fff" stroke="#8e44ad" stroke-width="2" rx="8"/>
+    <circle cx="220" cy="380" r="16" fill="#8e44ad"/>
+    <text x="220" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">CRM Comercial</text>
+    <text x="220" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Gestión de clientes</text>
+    
+    <!-- Feature 2: GPS Tracking -->
+    <rect x="420" y="340" width="240" height="160" fill="#fff" stroke="#8e44ad" stroke-width="2" rx="8"/>
+    <circle cx="540" cy="380" r="16" fill="#8e44ad"/>
+    <text x="540" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">GPS Tracking</text>
+    <text x="540" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Ubicación en tiempo real</text>
+    
+    <!-- Feature 3: Analytics -->
+    <rect x="740" y="340" width="240" height="160" fill="#fff" stroke="#8e44ad" stroke-width="2" rx="8"/>
+    <circle cx="860" cy="380" r="16" fill="#8e44ad"/>
+    <text x="860" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Reportes</text>
+    <text x="860" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Análisis de ventas</text>
+  </g>
+  
+  <!-- Tech stack footer -->
+  <rect y="570" width="1200" height="105" fill="url(#accent-purple)" opacity="0.12"/>
+  <text x="600" y="620" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c3483" font-weight="bold">
+    React · Flutter · Node.js · PostgreSQL · GPS
+  </text>
+  <text x="600" y="650" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#8e44ad">
+    Próximamente en producción
+  </text>
+</svg>
