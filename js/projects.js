@@ -1,8 +1,8 @@
 const fallbackProjects = [
-  { id: '01', title: 'Invitarte', category: 'Aplicación web', url: 'https://www.invitarte.lat/', tags: ['Nuxt', 'JavaScript', 'CSS', 'VPS'], description: 'Plataforma para creación y administración de invitaciones digitales, contenido, invitados, RSVP y álbumes.', status: 'Completado / Producción' },
-  { id: '02', title: 'Editorial Cronos', category: 'Plugin personalizado de WordPress', url: 'https://editorial-cronos.com/', tags: ['WordPress', 'PHP', 'JavaScript', 'Plugin personalizado'], description: 'Plugin personalizado desarrollado para controlar el acceso de profesores a material educativo, gestionar permisos y restringir la descarga del contenido.', status: 'Control y protección de contenido' },
-  { id: '03', title: 'Elyon Natural Product System', category: 'Aplicación web interna', url: 'http://elyonnatural.com/', tags: ['WordPress', 'WooCommerce', 'JavaScript', 'HTML', 'CSS', 'Web APIs'], description: 'Tienda virtual de suplementos muy completa, desarrollada con WordPress y WooCommerce, junto con una herramienta interna para centralizar productos y datos.', status: 'Tienda virtual / Herramienta interna' },
-  { id: '04', title: 'ZYMA', category: 'SaaS / Aplicación web', url: 'http://zymal.lat/', tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL', 'GPS'], description: 'Plataforma en desarrollo para gestión comercial y seguimiento de equipos de ventas en campo.', status: 'EN DESARROLLO' }
+  { id: '01', title: 'Invitarte', category: 'Aplicación web', url: 'https://invitarte.lat/', tags: ['Nuxt', 'JavaScript', 'CSS', 'VPS'], description: 'Plataforma para creación y administración de invitaciones digitales, contenido, invitados, RSVP y álbumes.', status: 'Completado / Producción', featured: true },
+  { id: '02', title: 'Editorial Cronos', category: 'Plugin personalizado de WordPress', url: 'https://editorial-cronos.com/', tags: ['WordPress', 'PHP', 'JavaScript', 'Plugin personalizado'], description: 'Plugin personalizado desarrollado para controlar el acceso de profesores a material educativo, gestionar permisos y restringir la descarga del contenido.', status: 'Control y protección de contenido', featured: false },
+  { id: '03', title: 'Elyon Natural Product System', category: 'Aplicación web interna', url: 'http://elyonnatural.com/', tags: ['WordPress', 'WooCommerce', 'JavaScript', 'HTML', 'CSS', 'Web APIs'], description: 'Tienda virtual de suplementos muy completa, desarrollada con WordPress y WooCommerce, junto con una herramienta interna para centralizar productos y datos.', status: 'Tienda virtual / Herramienta interna', featured: false },
+  { id: '04', title: 'ZYMA', category: 'SaaS / Aplicación web', url: 'http://zymal.lat/', tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL', 'GPS'], description: 'Plataforma en desarrollo para gestión comercial y seguimiento de equipos de ventas en campo.', status: 'EN DESARROLLO', featured: false }
 ];
 
 async function renderProjects() {
@@ -35,10 +35,13 @@ function mountProjects(projects, list, filters) {
       : projects.filter(project => project.category === filter);
 
     list.innerHTML = selectedProjects.map(project => `
-      <article class="project-row">
+      <article class="project-row ${project.featured ? 'is-featured' : ''}">
         <div class="project-number">PROYECTO ${project.id}</div>
         <div>
-          <h3>${project.title}${renderProjectLink(project)}</h3>
+          <div class="project-heading">
+            <h3>${project.title}${renderProjectLink(project)}</h3>
+            ${project.featured ? '<span class="project-badge">LIVE SITE</span>' : ''}
+          </div>
           <p class="project-category">${project.category}</p>
         </div>
         <div>
