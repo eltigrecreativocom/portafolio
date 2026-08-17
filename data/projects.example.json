@@ -1,0 +1,126 @@
+[
+  {
+    "id": "01",
+    "title": "Invitarte",
+    "category": "Aplicación web",
+    "url": "https://invitarte.lat/",
+    "description": "Plataforma para creación y administración de invitaciones digitales, contenido, invitados, RSVP y álbumes.",
+    "tags": ["Nuxt", "JavaScript", "CSS", "VPS"],
+    "status": "Completado / Producción",
+    "featured": true,
+    "media": {
+      "images": [
+        {
+          "src": "./assets/projects/01-invitarte/hero.jpg",
+          "alt": "Página de inicio - Hero de Invitarte con invitación de ejemplo"
+        },
+        {
+          "src": "./assets/projects/01-invitarte/rsvp.jpg",
+          "alt": "Sección de RSVP - Confirmación de asistencia"
+        },
+        {
+          "src": "./assets/projects/01-invitarte/album.jpg",
+          "alt": "Galería de fotos - Álbum compartido"
+        }
+      ],
+      "videos": [
+        {
+          "src": "./assets/projects/01-invitarte/demo.mp4",
+          "thumbnail": "./assets/projects/01-invitarte/demo-thumb.jpg",
+          "alt": "Demo en funcionamiento - Creación de invitación y RSVP"
+        }
+      ]
+    }
+  },
+  {
+    "id": "02",
+    "title": "Editorial Cronos",
+    "category": "Plugin personalizado de WordPress",
+    "url": "https://editorial-cronos.com/",
+    "description": "Plugin personalizado desarrollado para controlar el acceso de profesores a material educativo, gestionar permisos y restringir la descarga del contenido.",
+    "tags": ["WordPress", "PHP", "JavaScript", "Plugin personalizado"],
+    "status": "Control y protección de contenido",
+    "featured": false,
+    "media": {
+      "images": [
+        {
+          "src": "./assets/projects/02-editorial-cronos/dashboard.jpg",
+          "alt": "Dashboard de administración - Panel de control de profesores"
+        },
+        {
+          "src": "./assets/projects/02-editorial-cronos/materials.jpg",
+          "alt": "Gestión de materiales - Lista de contenido educativo"
+        }
+      ],
+      "videos": [
+        {
+          "src": "./assets/projects/02-editorial-cronos/permissions.mp4",
+          "thumbnail": "./assets/projects/02-editorial-cronos/permissions-thumb.jpg",
+          "alt": "Sistema de permisos - Cómo funcionan las restricciones"
+        }
+      ]
+    }
+  },
+  {
+    "id": "03",
+    "title": "Elyon Natural Product System",
+    "category": "Aplicación web interna",
+    "url": "http://elyonnatural.com/",
+    "description": "Tienda virtual de suplementos muy completa, desarrollada con WordPress y WooCommerce, junto con una herramienta interna para centralizar productos, precios, imágenes, registros sanitarios y códigos EAN-13.",
+    "tags": ["WordPress", "WooCommerce", "JavaScript", "HTML", "CSS", "Web APIs"],
+    "status": "Tienda virtual / Herramienta interna",
+    "featured": false,
+    "media": {
+      "images": [
+        {
+          "src": "./assets/projects/03-elyon-natural/store.jpg",
+          "alt": "Tienda online - Catálogo de productos de Elyon Natural"
+        },
+        {
+          "src": "./assets/projects/03-elyon-natural/catalog.jpg",
+          "alt": "Herramienta interna - Sistema de catálogo con EAN-13"
+        },
+        {
+          "src": "./assets/projects/03-elyon-natural/products.jpg",
+          "alt": "Base de datos - Información de productos y registros sanitarios"
+        }
+      ],
+      "videos": [
+        {
+          "src": "./assets/projects/03-elyon-natural/scanning.mp4",
+          "thumbnail": "./assets/projects/03-elyon-natural/scanning-thumb.jpg",
+          "alt": "Validación de códigos - Escaneo de códigos EAN-13"
+        }
+      ]
+    }
+  },
+  {
+    "id": "04",
+    "title": "ZYMA",
+    "category": "SaaS / Aplicación web",
+    "url": "http://zymal.lat/",
+    "description": "Plataforma en desarrollo para gestión comercial y seguimiento de equipos de ventas en campo.",
+    "tags": ["React", "Flutter", "Node.js", "PostgreSQL", "GPS"],
+    "status": "EN DESARROLLO",
+    "featured": false,
+    "media": {
+      "images": [
+        {
+          "src": "./assets/projects/04-zyma/dashboard.jpg",
+          "alt": "Dashboard - Panel de control de ventas en tiempo real"
+        },
+        {
+          "src": "./assets/projects/04-zyma/map.jpg",
+          "alt": "Mapa GPS - Seguimiento de ubicación de vendedores"
+        }
+      ],
+      "videos": [
+        {
+          "src": "./assets/projects/04-zyma/tracking.mp4",
+          "thumbnail": "./assets/projects/04-zyma/tracking-thumb.jpg",
+          "alt": "GPS en acción - Rastreo de vendedores en campo"
+        }
+      ]
+    }
+  }
+]
