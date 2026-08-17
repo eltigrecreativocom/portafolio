@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-elyon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a45;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad-elyon)"/>
+  <rect width="1200" height="90" fill="#27ae60" opacity="0.3"/>
+  <circle cx="100" cy="45" r="30" fill="#27ae60"/>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#27ae60">ELYON NATURAL</text>
+  
+  <text x="600" y="170" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#fff">Tienda Virtual</text>
+  
+  <g id="products-display">
+    <rect x="100" y="250" width="220" height="300" fill="none" stroke="#27ae60" stroke-width="2" rx="8"/>
+    <rect x="110" y="260" width="200" height="120" fill="#27ae60" opacity="0.2"/>
+    <text x="210" y="320" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#27ae60">Producto 1</text>
+    <text x="210" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">$29.99</text>
+    
+    <rect x="390" y="250" width="220" height="300" fill="none" stroke="#27ae60" stroke-width="2" rx="8"/>
+    <rect x="400" y="260" width="200" height="120" fill="#27ae60" opacity="0.2"/>
+    <text x="500" y="320" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#27ae60">Producto 2</text>
+    <text x="500" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">$34.99</text>
+    
+    <rect x="680" y="250" width="220" height="300" fill="none" stroke="#27ae60" stroke-width="2" rx="8"/>
+    <rect x="690" y="260" width="200" height="120" fill="#27ae60" opacity="0.2"/>
+    <text x="790" y="320" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#27ae60">Producto 3</text>
+    <text x="790" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">$24.99</text>
+    
+    <rect x="970" y="250" width="220" height="300" fill="none" stroke="#27ae60" stroke-width="2" rx="8"/>
+    <rect x="980" y="260" width="200" height="120" fill="#27ae60" opacity="0.2"/>
+    <text x="1080" y="320" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#27ae60">Producto 4</text>
+    <text x="1080" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">$19.99</text>
+  </g>
+</svg>

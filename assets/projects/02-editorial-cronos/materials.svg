@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-materials" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a45;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad-materials)"/>
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="#fff">GESTIÓN DE MATERIALES</text>
+  
+  <rect x="80" y="200" width="1040" height="500" fill="none" stroke="#27ae60" stroke-width="2" rx="8"/>
+  <rect x="80" y="200" width="1040" height="50" fill="#27ae60" opacity="0.2"/>
+  
+  <text x="150" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Archivo</text>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Tipo</text>
+  <text x="700" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Acceso</text>
+  <text x="1000" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Descargas</text>
+  
+  <line x1="80" y1="280" x2="1120" y2="280" stroke="#27ae60" stroke-width="1" opacity="0.3"/>
+  <text x="150" y="310" font-family="monospace" font-size="12" fill="#fff">ebook-capitulo-1.pdf</text>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">PDF</text>
+  <text x="700" y="310" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">Restringido</text>
+  <text x="1000" y="310" font-family="Arial, sans-serif" font-size="12" fill="#fff">245</text>
+  
+  <line x1="80" y1="350" x2="1120" y2="350" stroke="#27ae60" stroke-width="1" opacity="0.3"/>
+  <text x="150" y="380" font-family="monospace" font-size="12" fill="#fff">guia-estudio-2024.docx</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">DOCX</text>
+  <text x="700" y="380" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">Restringido</text>
+  <text x="1000" y="380" font-family="Arial, sans-serif" font-size="12" fill="#fff">189</text>
+  
+  <line x1="80" y1="420" x2="1120" y2="420" stroke="#27ae60" stroke-width="1" opacity="0.3"/>
+  <text x="150" y="450" font-family="monospace" font-size="12" fill="#fff">solucionario-completo.zip</text>
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">ZIP</text>
+  <text x="700" y="450" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">Restringido</text>
+  <text x="1000" y="450" font-family="Arial, sans-serif" font-size="12" fill="#fff">432</text>
+</svg>

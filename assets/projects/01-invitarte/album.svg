@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a45;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad3)"/>
+  
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="#fff">GALERÍA DE FOTOS</text>
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#27ae60">Álbum Digital Compartido</text>
+  
+  <g id="photos">
+    <rect x="80" y="250" width="220" height="200" fill="url(#accent3)" opacity="0.3" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="190" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#27ae60">Foto 1</text>
+    
+    <rect x="360" y="250" width="220" height="200" fill="url(#accent3)" opacity="0.3" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="470" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#27ae60">Foto 2</text>
+    
+    <rect x="640" y="250" width="220" height="200" fill="url(#accent3)" opacity="0.3" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="750" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#27ae60">Foto 3</text>
+    
+    <rect x="920" y="250" width="220" height="200" fill="url(#accent3)" opacity="0.3" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="1030" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#27ae60">Foto 4</text>
+  </g>
+  
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#27ae60">Cargadas automáticamente por los invitados</text>
+  
+  <rect y="650" width="1200" height="150" fill="url(#accent3)" opacity="0.1"/>
+  <text x="600" y="710" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#27ae60" font-weight="bold">Sistema de Galería Colaborativa</text>
+</svg>
