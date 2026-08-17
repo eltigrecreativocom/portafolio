@@ -1,8 +1,8 @@
 const fallbackProjects = [
-  { id: '01', title: 'Invitarte', category: 'Aplicación web', url: 'https://invitarte.lat/', tags: ['Nuxt', 'JavaScript', 'CSS', 'VPS'], description: 'Plataforma para creación y administración de invitaciones digitales, contenido, invitados, RSVP y álbumes.', status: 'Completado / Producción', featured: true, media: { images: [], videos: [] } },
-  { id: '02', title: 'Editorial Cronos', category: 'Plugin personalizado de WordPress', url: 'https://editorial-cronos.com/', tags: ['WordPress', 'PHP', 'JavaScript', 'Plugin personalizado'], description: 'Plugin personalizado desarrollado para controlar el acceso de profesores a material educativo, gestionar permisos y restringir la descarga del contenido.', status: 'Control y protección de contenido', featured: false, media: { images: [], videos: [] } },
-  { id: '03', title: 'Elyon Natural Product System', category: 'Aplicación web interna', url: 'http://elyonnatural.com/', tags: ['WordPress', 'WooCommerce', 'JavaScript', 'HTML', 'CSS', 'Web APIs'], description: 'Tienda virtual de suplementos muy completa, desarrollada con WordPress y WooCommerce, junto con una herramienta interna para centralizar productos y datos.', status: 'Tienda virtual / Herramienta interna', featured: false, media: { images: [], videos: [] } },
-  { id: '04', title: 'ZYMA', category: 'SaaS / Aplicación web', url: 'http://zymal.lat/', tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL', 'GPS'], description: 'Plataforma en desarrollo para gestión comercial y seguimiento de equipos de ventas en campo.', status: 'EN DESARROLLO', featured: false, media: { images: [], videos: [] } }
+  { id: '01', title: 'Invitarte', category: 'Aplicación web', url: 'https://invitarte.lat/', tags: ['Nuxt', 'JavaScript', 'CSS', 'VPS'], description: 'Plataforma para creación y administración de invitaciones digitales, contenido, invitados, RSVP y álbumes.', status: 'Completado / Producción', featured: true, media: { images: [{ src: './assets/projects/01-invitarte/hero.svg', alt: 'Página de inicio - Hero de Invitarte' }, { src: './assets/projects/01-invitarte/rsvp.svg', alt: 'Sección de RSVP - Confirmación de asistencia' }, { src: './assets/projects/01-invitarte/album.svg', alt: 'Galería de fotos - Álbum compartido' }], videos: [{ src: './assets/projects/01-invitarte/demo.mp4', thumbnail: './assets/projects/01-invitarte/demo-thumb.svg', alt: 'Demo en funcionamiento' }] } },
+  { id: '02', title: 'Editorial Cronos', category: 'Plugin personalizado de WordPress', url: 'https://editorial-cronos.com/', tags: ['WordPress', 'PHP', 'JavaScript', 'Plugin personalizado'], description: 'Plugin personalizado desarrollado para controlar el acceso de profesores a material educativo, gestionar permisos y restringir la descarga del contenido.', status: 'Control y protección de contenido', featured: false, media: { images: [{ src: './assets/projects/02-editorial-cronos/dashboard.svg', alt: 'Dashboard de administración' }, { src: './assets/projects/02-editorial-cronos/materials.svg', alt: 'Gestión de materiales educativos' }], videos: [{ src: './assets/projects/02-editorial-cronos/permissions.mp4', thumbnail: './assets/projects/02-editorial-cronos/permissions-thumb.svg', alt: 'Sistema de permisos' }] } },
+  { id: '03', title: 'Elyon Natural Product System', category: 'Aplicación web interna', url: 'http://elyonnatural.com/', tags: ['WordPress', 'WooCommerce', 'JavaScript', 'HTML', 'CSS', 'Web APIs'], description: 'Tienda virtual de suplementos muy completa, desarrollada con WordPress y WooCommerce, junto con una herramienta interna para centralizar productos y datos.', status: 'Tienda virtual / Herramienta interna', featured: false, media: { images: [{ src: './assets/projects/03-elyon-natural/store.svg', alt: 'Tienda online' }, { src: './assets/projects/03-elyon-natural/catalog.svg', alt: 'Herramienta interna de catálogo' }], videos: [{ src: './assets/projects/03-elyon-natural/scanning.mp4', thumbnail: './assets/projects/03-elyon-natural/scanning-thumb.svg', alt: 'Validación de códigos EAN-13' }] } },
+  { id: '04', title: 'ZYMA', category: 'SaaS / Aplicación web', url: 'http://zymal.lat/', tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL', 'GPS'], description: 'Plataforma en desarrollo para gestión comercial y seguimiento de equipos de ventas en campo.', status: 'EN DESARROLLO', featured: false, media: { images: [{ src: './assets/projects/04-zyma/dashboard.svg', alt: 'Dashboard de ventas' }, { src: './assets/projects/04-zyma/map.svg', alt: 'Mapa GPS de seguimiento' }], videos: [{ src: './assets/projects/04-zyma/tracking.mp4', thumbnail: './assets/projects/04-zyma/tracking-thumb.svg', alt: 'GPS en acción' }] } }
 ];
 
 async function renderProjects() {
@@ -30,23 +30,31 @@ function mountProjects(projects, list, filters) {
     .join('');
 
   const drawProjects = filter => {
+    // Initialize gallery storage
+    window.portfolioGalleries = window.portfolioGalleries || {};
+    
     const selectedProjects = (filter === 'ALL' ? projects : projects.filter(project => project.category === filter))
       .sort((a, b) => Number(b.featured || false) - Number(a.featured || false));
 
     list.innerHTML = selectedProjects.map((project, idx) => {
       const media = project.media || { images: [], videos: [] };
-      const galleryHTML = (media.images.length || media.videos.length) 
+      const allMedia = [
+        ...media.images.map(img => ({ type: 'image', ...img })),
+        ...media.videos.map(vid => ({ type: 'video', ...vid }))
+      ];
+      
+      // Store gallery data in JavaScript object
+      window.portfolioGalleries[project.id] = allMedia;
+      
+      const galleryHTML = allMedia.length > 0 
         ? `<div class="project-gallery" data-project-id="${project.id}">
-             ${media.images.map((img, i) => 
-               `<button class="project-gallery-thumb gallery-opener" data-project="${project.id}" data-index="${i}" aria-label="Ver galería de ${project.title}">
-                  <img src="${img.src}" alt="${img.alt}" loading="lazy">
-                  <span class="project-gallery-badge">IMAGEN</span>
-                </button>`
-             ).join('')}
-             ${media.videos.map((vid, i) => 
-               `<button class="project-gallery-thumb gallery-opener" data-project="${project.id}" data-index="${media.images.length + i}" aria-label="Ver video de ${project.title}">
-                  <img src="${vid.thumbnail}" alt="${vid.alt}" loading="lazy">
-                  <span class="project-gallery-badge">VÍDEO</span>
+             ${allMedia.map((item, i) => 
+               `<button class="project-gallery-thumb gallery-opener" 
+                  data-project="${project.id}" 
+                  data-index="${i}"
+                  aria-label="Ver galería de ${project.title}">
+                  <img src="${item.type === 'video' ? (item.thumbnail || item.src) : item.src}" alt="${item.alt}" loading="lazy">
+                  <span class="project-gallery-badge">${item.type === 'video' ? 'VÍDEO' : 'IMAGEN'}</span>
                 </button>`
              ).join('')}
            </div>`
@@ -83,7 +91,6 @@ function mountProjects(projects, list, filters) {
     // Attach gallery event listeners
     attachGalleryListeners();
   };
-  };
 
   filters.addEventListener('click', event => {
     if (!event.target.matches('.filter-button')) return;
@@ -105,40 +112,14 @@ function attachGalleryListeners() {
     btn.addEventListener('click', e => {
       e.preventDefault();
       const projectId = btn.dataset.project;
-      const project = Array.from(document.querySelectorAll('[data-project-id]'))
-        .map(el => el.dataset.projectId)
-        .find(id => id === projectId);
+      const index = parseInt(btn.dataset.index);
       
-      if (!project) return;
+      // Get gallery data from global store
+      if (!window.portfolioGalleries || !window.portfolioGalleries[projectId]) return;
       
-      // Build gallery array from current project's media
-      const gallery = [];
-      const galleryEl = document.querySelector(`[data-project-id="${projectId}"]`);
-      const thumbs = galleryEl?.querySelectorAll('.project-gallery-thumb') || [];
-      
-      thumbs.forEach((thumb, i) => {
-        const img = thumb.querySelector('img');
-        const isBadgeVideo = thumb.querySelector('.project-gallery-badge').textContent.includes('VÍDEO');
-        
-        if (isBadgeVideo) {
-          // Extract video from data attribute or construct from thumbnail
-          gallery.push({
-            type: 'video',
-            src: img.src.replace(/thumb/, '').replace(/\.(jpg|png|webp)$/, '.mp4'),
-            thumbnail: img.src,
-            alt: img.alt
-          });
-        } else {
-          gallery.push({
-            type: 'image',
-            src: img.src,
-            alt: img.alt
-          });
-        }
-      });
-      
+      const gallery = window.portfolioGalleries[projectId];
       if (gallery.length > 0) {
-        window.Lightbox.open(gallery, btn.dataset.index || 0);
+        window.Lightbox.open(gallery, index);
       }
     });
   });
